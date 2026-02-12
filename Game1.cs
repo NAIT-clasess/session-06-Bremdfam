@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -6,6 +7,7 @@ namespace Assignment_01;
 
 public class Game1 : Game
 {
+
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
@@ -14,6 +16,20 @@ public class Game1 : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        ArrayAndListintroduction();
+    }
+
+    public void ArrayAndListintroduction()
+    {
+        float[] grades = new float[] {12, 14, 15, 11, 23.5f};
+
+        List<float> gradeList = new List<float>();
+        System.Console.WriteLine("Grades List: " + gradeList);
+
+        for(int i=0; i < grades.Length; i++)
+        {
+            System.Console.WriteLine("Grades List: " + grades[i]);
+        }
     }
 
     protected override void Initialize()
